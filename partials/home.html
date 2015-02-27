@@ -1,0 +1,19 @@
+<form ng-submit="BeatsFactory.addBeat()" role="form">
+  <div class="form-group">
+    <legend>Create a new Beat</legend>
+    <input ng-model="BeatsFactory.beat" type="text" placeholder="Name of beat" name="beat" class="form-control" required>
+  </div>
+  <button type="submit" class="btn btn-info">Create</button>
+</form>
+<br>
+<div class="panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Current Beats:</h3>
+  </div>
+  <div class="panel-body">
+    <ul>
+      <li ng-repeat = "item in BeatsFactory.beats | filter:query"> <a ui-sref="home.reporters({ beatId: item.id })">{{item.name}}</a><a ng-click="BeatsFactory.deleteBeat(item)" class="destinguish">  delete </a></li>
+    </ul>
+  </div>
+</div>
+<div ui-view> </div>

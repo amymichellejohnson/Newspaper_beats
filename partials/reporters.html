@@ -1,0 +1,22 @@
+<form ng-submit = "addReporter()" class="">
+  <legend> Add a reporter to {{beat.name}}</legend>
+  <div class="form-group">
+    <label> Reporter's name:</label>
+    <input ng-model = "reporterName" placeholder= "Name" required class="form-control">
+    <label>Years of employment:</label>
+    <input ng-model = "employmentYears" placeholder="2010-present" required class="form-control">
+    <label>Reporter's Date of Birth:</label>
+    <input ng-model = "dOB" placeholder="01/15/1999" required class="form-control">
+  </div>
+  <button type="submit" class="btn btn-danger">Add</button>
+<form>
+<br>
+<div ng-show="beat.reporters.length">
+  <h3>Reporter List for {{ beat.name }}:</h3>
+  <ul>
+    <li ng-repeat="item in beat.reporters">
+      <span class= "clickable" ng-click = "showReporterInfo = ! showReporterInfo">{{ item.name }}</span>
+      <div ng-show="showReporterInfo">Years of Employment: {{item.employmentYears}}, DOB: {{item.dOB}}</div>
+    </li>
+  </ul>
+</div>
