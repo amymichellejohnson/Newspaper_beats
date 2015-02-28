@@ -1,3 +1,5 @@
+***I know I forgot to GIT COMMIT!  I'm sorry!  I'm such a bad Git Commiter---I will try to remember to do it regularly next assignment :( ****
+  
 INTRODUCTION
 ------------
 The Newspaper app allows a newspaper to keep track of its specialized reporting divisions or "beats" and the reporters assigned to those beats. The app allows users to add reporters with their name, years of employment and birthday to a particular beat, display the beats with the reporters listed by name underneath, filter or search the beats, and to click on a reporter and see all of the details about that reporter.
